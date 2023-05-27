@@ -1,0 +1,20 @@
+{
+    "name": "My Chrome Extension",
+    "version": "1.0.0",
+    "description": "Making Life easy",
+    "manifest_version":3,
+    "author": "Shashank Shekhar Shukla",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "My Chrome Extension"
+    },
+    "content_scripts": [
+        {
+          "js": ["scripts/script.js"],
+          "matches": [
+            "https://arxiv.org/*"
+          ],
+          "css":["style.css"]
+        }
+    ]
+}
