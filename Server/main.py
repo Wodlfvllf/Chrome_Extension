@@ -32,9 +32,12 @@ def post_data():
     # print(data)
     url = data.get('url')
     # print(url)
+    print("HuggingFace...")
+    print(url)
     text = Transformers.urlParse(url)
     response = {'summary_text' : text}
     print(response)
+    print("Output...")
     return jsonify(response)
 
 if __name__ == "__main__":

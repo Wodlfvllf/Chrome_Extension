@@ -20,9 +20,9 @@ async function getSummarisedText(API_URL, payload)
 }
 
 // var input_txt = pageText;
-
+url = "https://arxiv.org/"+href;
 payload = {
-    "url": "https://arxiv.org/pdf/1512.03385.pdf"
+    "url": url
 };
 
 getSummarisedText(API_URL, payload)

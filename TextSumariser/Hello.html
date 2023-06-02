@@ -8,8 +8,20 @@
 </head>
 <body>
     <p id = "initial">Loading ...</p>
+    <a href='style.css' class="mobile">Hello</a>
     <!-- <div id="summary"></div>  -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script> -->
-    <script src="HuugingFace.js"></script>
+    <script>
+        var anchorElements = document.getElementsByClassName('mobile');
+        if (anchorElements.length > 0) {
+            var href = anchorElements[0].getAttribute('href');
+            str = "hello/"+href;
+            console.log(str);
+
+        } else {
+            console.log('Anchor element not found');
+        }
+  
+    </script>
 </body>
 </html>

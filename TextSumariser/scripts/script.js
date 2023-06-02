@@ -5,6 +5,17 @@ const API_URL = "http://localhost:8000/post_data";
 // const pdfjsLib = require('pdfjs-dist');
 
 let pageText = "";
+var anchorElements = document.getElementsByClassName('mobile-submission-download');
+var href;
+if (anchorElements.length > 0) 
+{
+    href = anchorElements[0].getAttribute('href');
+    console.log(href);
+} 
+else 
+{
+    console.log('Anchor element not found');
+}
 
 async function getSummarisedText(API_URL, payload)
 {
@@ -51,9 +62,9 @@ async function getSummarisedText(API_URL, payload)
         })}
 
 // var input_txt = pageText;
-
+urL = "https://arxiv.org"+href;
 payload = {
-    "url": "https://arxiv.org/pdf/1512.03385.pdf"
+    "url": urL
 };
 
 getSummarisedText(API_URL, payload)
